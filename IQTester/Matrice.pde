@@ -26,8 +26,8 @@ class Matrice //TODO: Riga 196
     Matrice(float m[][])
     {
         matrice = m;
-        colonne = m.lenght;
-        righe = m[0].lenght;  
+        colonne = m.length;
+        righe = m[0].length;  
     }
 
     /*********************************************************************
@@ -59,11 +59,13 @@ class Matrice //TODO: Riga 196
     */
     Matrice matriceSingolaColonnaDaArray(float[] array)
     {
-        Matrice nuovaMatrice = new Matrice(array.lenght, 1);
-        for(int i = 0; i < nuovaMatrice.righe, i++)
+        Matrice nuovaMatrice = new Matrice(array.length, 1);
+        for(int i = 0; i < nuovaMatrice.righe; i++)
         {
             nuovaMatrice.matrice[i][0] = array[i];
         }
+        
+        return nuovaMatrice;
     }
 
     /*
@@ -73,7 +75,7 @@ class Matrice //TODO: Riga 196
     {
         for(int i = 0; i < righe; i++)
         {
-            for(int j = 0; j < colonna; j++)
+            for(int j = 0; j < colonne; j++)
             {
                 matrice[i][j] = array[j + (i * colonne)];
             }
@@ -93,6 +95,8 @@ class Matrice //TODO: Riga 196
                 nuovoArray[j + (i * colonne)] = matrice[i][j];
             }
         }
+        
+        return nuovoArray;
     }
 
     /*
@@ -100,7 +104,7 @@ class Matrice //TODO: Riga 196
     */
     Matrice aggiungiBias()
     {
-        Matrice nuovaMatrice = new Matrice(righe + 1; 1);
+        Matrice nuovaMatrice = new Matrice(righe + 1, 1);
         for(int i = 0; i < righe; i++)
         {
             nuovaMatrice.matrice[i][0] = matrice[i][0];
@@ -178,7 +182,7 @@ class Matrice //TODO: Riga 196
     */
     Matrice crossover(Matrice partner)
     {
-        Matrice figlio ) new Matrice(righe, colonne);
+        Matrice figlio = new Matrice(righe, colonne);
 
         //Prendo un punto casuale nella matrice
         int rigaRandom = floor(random(righe));

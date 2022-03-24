@@ -73,7 +73,7 @@ class ReteNeurale
         5) Aggiungo bias
         */
         Matrice primoLayer = weightsOutputNascosti.matriceSingolaColonnaDaArray(arrayInput);
-        Matrice primoLayerBias = primoLayer.aggiungiBias;
+        Matrice primoLayerBias = primoLayer.aggiungiBias();
         Matrice secondoLayer = weightsInputNascosti.dot(primoLayerBias);
         Matrice secondoLayerSigmoidea = secondoLayer.applicaSigmoidea();
         Matrice secondoLayerBias = secondoLayerSigmoidea.aggiungiBias();
@@ -101,6 +101,8 @@ class ReteNeurale
             weightsNascostiNascosti.crossover(partner.weightsNascostiNascosti);
         figlio.weightsOutputNascosti = 
             weightsOutputNascosti.crossover(partner.weightsOutputNascosti);
+            
+        return figlio;
     }
 
     /*
@@ -139,7 +141,7 @@ class ReteNeurale
         
         //Imposto la prima riga come weightsInputNascosti
         TableRow rigaTabella = tabella.addRow();
-        for(i = 0; i < arrayWeightsInputNascosti.lenght; i++)
+        for(i = 0; i < arrayWeightsInputNascosti.length; i++)
         {
             rigaTabella.setFloat(i, arrayWeightsInputNascosti[i]);
         }

@@ -32,7 +32,18 @@
     /START VAR DECLARATION
     *********************************************************************/
 
-    ;
+    Mondo mondo; //Il container delle generazioni di partite
+    Mondo mondoS; //Il container delle 5 NN migliori
+
+    //Variabili utilizzate per modificare le opzioni durante l'esecuzione
+    int frameRate = 60;
+    int numeroNNMigliore; //La NN selezionata (1 - 5)
+    float rateoMutazione = 0.01;
+    boolean mostratutti = false; //TRUE: Mostra tutte le partite
+    boolean faseTraningS = false; //TRUE: Training 5 NN migliori; FALSE: Fase normale
+    boolean mostraNNMigliore = false; //TRUE: Fase testing una delle 5 NN
+    boolean superNN = false; //TRUE: Fase testing fusione delle 5 NN
+    boolean trainingManuale = false; //TRUE: Training tramite interazione
 
     /*********************************************************************
     /END VAR DECLARATION
@@ -42,8 +53,6 @@
     /START CONSTRUCTOR DECLARATION
     *********************************************************************/
 
-    ;
-
     /*********************************************************************
     /END CONSTRUCTOR DECLARATION
     *********************************************************************/
@@ -52,7 +61,34 @@
     /START METHODS DECLARATION
     *********************************************************************/
 
-    ;
+    /*
+    Setup della sessione
+    */
+    void setup()
+    {
+        frameRate(frameRate);
+        size(800, 400); //Dimensione finestra
+        mondo = new Mondo(5, 5); //Quante "popolazioni" e quante partite per ognuna
+    }
+
+    /*
+    Fase di esecuzione della sessione
+    */
+    void draw()
+    {
+        background(40);
+        mostraDati();
+    }
+
+    /*
+    */
+    void mostraDati()
+    {
+        stroke(255, 50, 50);
+        line(400, 0, 400, 400);
+        fill(255);
+        textSize(30);
+    }
 
     /*********************************************************************
     /END METHODS DECLARATION

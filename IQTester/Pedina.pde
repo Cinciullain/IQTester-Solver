@@ -13,7 +13,7 @@ class Pedina
     long fitness = 0; //Qualità della pedina, forse non serve
     boolean statoPedina = true; //TRUE: Presente
     boolean test = false; //TRUE: Fase testing; FALSE: Fase training
-    float[] vistaPedina = new float[bho]; //TODO Gli input della rete neurale, da decidere se impletementare qua o altrove
+    float[] vistaPedina = new float[24]; //TODO Gli input della rete neurale, da decidere se impletementare qua o altrove
     float[] decisioneReteNeurale; //Come prima todo da decidere, Output RN
 
     /*********************************************************************
@@ -46,7 +46,7 @@ class Pedina
         fill(100);
         stroke(0);
 
-        rect(0, 0, 10, 10)
+        rect(0, 0, 10, 10);
     }
 
     /*********************************************************************
