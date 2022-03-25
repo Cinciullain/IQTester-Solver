@@ -26,7 +26,14 @@ class Pedina
 
     Pedina()
     {
-        
+        posizione = new PVector();
+
+        /*
+        Imposta la posizione su un punto randomico
+        +400 per sportare la scheramta a destra e non farla sovrapporre alle statistiche
+        */
+        posizione.x = 400+floor(random(0, 40)) * 10; 
+        posizione.y = floor(random(0, 40)) * 10;
     }
 
     /*********************************************************************
@@ -43,10 +50,9 @@ class Pedina
     */
     void printPedina()
     {
-        fill(100);
+        fill(255);
         stroke(0);
-
-        rect(0, 0, 10, 10);
+        rect(posizione.x, posizione.y, 10, 10);
     }
 
     /*********************************************************************
