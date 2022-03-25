@@ -32,8 +32,10 @@ class Pedina
         Imposta la posizione su un punto randomico
         +400 per sportare la scheramta a destra e non farla sovrapporre alle statistiche
         */
-        posizione.x = 400+floor(random(0, 40)) * 10; 
-        posizione.y = floor(random(0, 40)) * 10;
+        //posizione.x = 400+floor(random(0, 40)) * 10; 
+        //posizione.y = floor(random(0, 40)) * 10;
+        posizione.x = 400 + 200; 
+        posizione.y = 190;
     }
 
     /*********************************************************************

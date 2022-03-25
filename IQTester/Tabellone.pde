@@ -4,7 +4,10 @@ class Tabellone
     /START VAR DECLARATION
     *********************************************************************/
 
-    ;
+    Pedina pedine[];
+    ReteNeurale reteNeurale;
+    PVector posizioneStruttura; //Mi immagino un tabellone triangolare con gli spazi dell epedine
+    ArrayList<PVector> posizioniPedine;
 
     /*********************************************************************
     /END VAR DECLARATION
@@ -14,7 +17,11 @@ class Tabellone
     /START CONSTRUCTOR DECLARATION
     *********************************************************************/
 
-    ;
+    Tabellone()
+    {
+        //posizioneStruttura.x = 400 + 200; 
+        //posizioneStruttura.y = 190;
+    }
 
     /*********************************************************************
     /END CONSTRUCTOR DECLARATION
@@ -24,7 +31,13 @@ class Tabellone
     /START METHODS DECLARATION
     *********************************************************************/
 
-    ;
+    void printTabellone()
+    {
+        //background(100, 100, 100);
+        fill(200, 100, 100);
+        triangle(401, 390, 600, 0, 800, 389);
+
+    }
 
     /*********************************************************************
     /END METHODS DECLARATION

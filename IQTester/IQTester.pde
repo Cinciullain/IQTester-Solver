@@ -46,6 +46,7 @@
     boolean trainingManuale = false; //TRUE: Training tramite interazione
     
     Pedina pedina;
+    Tabellone tab;
 
     /*********************************************************************
     /END VAR DECLARATION
@@ -72,6 +73,7 @@
         size(800, 400); //Dimensione finestra
         mondo = new Mondo(5, 5); //Quante "popolazioni" e quante partite per ognuna
         pedina = new Pedina();
+        tab = new Tabellone();
     }
 
     /*
@@ -82,6 +84,7 @@
         background(40);
         mostraDati();
         pedina.printPedina();
+        tab.printTabellone();
     }
 
     /*
@@ -189,44 +192,44 @@
             case '5':
             {
                 mostraNNMigliore = !mostraNNMigliore;
-                mostraNNMigliore = 5;
-                mondo.testNNMigliore(0);
+                //mostraNNMigliore = 5;
+                //mondo.testNNMigliore(0);
                 break;    
             } 
                 
             //Test NN Migliore 1
             case '1':
             {
-                mondo.testNNMigliore(1);
-                mostraNNMigliore = 1;
-                mostraNNMigliore = !mostraNNMigliore;
+                //mondo.testNNMigliore(1);
+                //mostraNNMigliore = 1;
+                //mostraNNMigliore = !mostraNNMigliore;
                 break;        
             } 
                 
             //Test NN Migliore 2
             case '2':
             {
-                mondo.testNNMigliore(2);
-                mostraNNMigliore = 2;
-                mostraNNMigliore = !mostraNNMigliore;
+                //mondo.testNNMigliore(2);
+                //mostraNNMigliore = 2;
+               // mostraNNMigliore = !mostraNNMigliore;
                 break;
             } 
                 
             //Test NN Migliore 3
             case '3':
             {
-                mondo.testNNMigliore(3);
-                mostraNNMigliore = 3;
-                mostraNNMigliore = !mostraNNMigliore;
+               // mondo.testNNMigliore(3);
+                //mostraNNMigliore = 3;
+                //mostraNNMigliore = !mostraNNMigliore;
                 break;
             } 
                 
             //Test NN Migliore 4
             case '4':
             {
-                mondo.testNNMigliore(4);
-                mostraNNMigliore = 4;
-                mostraNNMigliore = !mostraNNMigliore;
+                //mondo.testNNMigliore(4);
+               // mostraNNMigliore = 4;
+               // mostraNNMigliore = !mostraNNMigliore;
                 break;
             }
                 
