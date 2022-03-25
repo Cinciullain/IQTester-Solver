@@ -39,7 +39,7 @@
     int frameRate = 60;
     int numeroNNMigliore; //La NN selezionata (1 - 5)
     float rateoMutazione = 0.01;
-    boolean mostratutti = false; //TRUE: Mostra tutte le partite
+    boolean mostraTutti = false; //TRUE: Mostra tutte le partite
     boolean faseTraningNNM = false; //TRUE: Training 5 NN migliori; FALSE: Fase normale
     boolean mostraNNMigliore = false; //TRUE: Fase testing una delle 5 NN
     boolean superNN = false; //TRUE: Fase testing fusione delle 5 NN
